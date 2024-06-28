@@ -28,18 +28,38 @@ class MyCarousel extends Component {
 
   render() {
     return (
-      <Carousel>
+      <>
         <h1 className="mt-3">{this.props.titolo}</h1>
-        <Carousel.Item className="d-block" interval={1000}>
-          <Row className="g-2">
-            {this.state.movies.splice(0, 6).map((film, index) => (
-              <Col sm="2" key={index}>
-                {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
-              </Col>
-            ))}
-          </Row>
-        </Carousel.Item>
-      </Carousel>
+        <Carousel>
+          <Carousel.Item interval={2000}>
+            <Row className="g-2">
+              {this.state.movies.slice(0, 6).map((film, index) => (
+                <Col sm="2" key={index}>
+                  {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <Row className="g-2">
+              {this.state.movies.slice(0, 6).map((film, index) => (
+                <Col sm="2" key={index}>
+                  {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <Row className="g-2">
+              {this.state.movies.slice(0, 6).map((film, index) => (
+                <Col sm="2" key={index}>
+                  {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        </Carousel>
+      </>
     );
   }
 }
