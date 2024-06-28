@@ -2,11 +2,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Component } from "react";
-import { Image } from "react-bootstrap";
+import { Image, Spinner } from "react-bootstrap";
 
 class MySlick extends Component {
   state = {
     movies: [],
+    isLoading: true,
   };
   settings = {
     dots: true,
@@ -52,7 +53,7 @@ class MySlick extends Component {
         }
       })
       .then((response) => {
-        this.setState({ movies: response.Search });
+        this.setState({ movies: response.Search, isLoading: false });
         console.log("Film della fetch", response.Search);
       })
       .catch((error) => console.log(error));
@@ -66,12 +67,11 @@ class MySlick extends Component {
     return (
       <>
         <h1 className="mt-3">{this.props.titolo}</h1>
+        {this.state.isLoading && <Spinner animation="grow" />}
         <div className="slider-container">
           <Slider {...this.settings}>
             {this.state.movies.map((film, index) => (
-              <div sm="2" key={index}>
-                {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
-              </div>
+              <div key={index}>{<Image className="img-fluid px-2" src={film.Poster} alt="Copertina" />}</div>
             ))}
           </Slider>
         </div>

@@ -1,9 +1,10 @@
 import { Component } from "react";
-import { Carousel, Col, Image, Row } from "react-bootstrap";
+import { Carousel, Col, Image, Row, Spinner } from "react-bootstrap";
 
 class MyCarousel extends Component {
   state = {
     movies: [],
+    isLoading: true,
   };
 
   fetchFilm = () => {
@@ -16,7 +17,7 @@ class MyCarousel extends Component {
         }
       })
       .then((response) => {
-        this.setState({ movies: response.Search });
+        this.setState({ movies: response.Search, isLoading: false });
         console.log("Film della fetch", response.Search);
       })
       .catch((error) => console.log(error));
@@ -29,6 +30,7 @@ class MyCarousel extends Component {
   render() {
     return (
       <>
+        {this.state.isLoading && <Spinner animation="grow" />}
         <h1 className="mt-3">{this.props.titolo}</h1>
         <Carousel>
           <Carousel.Item interval={2000}>
