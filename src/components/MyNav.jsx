@@ -4,7 +4,7 @@ import kids from "../data/kids_icon.png";
 
 const MyNav = () => {
   return (
-    <Navbar expand="lg" className="">
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} alt="NetflixLogo" width={"100px"} />
