@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Carousel, Col, Row } from "react-bootstrap";
+import { Carousel, Col, Image, Row } from "react-bootstrap";
 
 class MyCarouselItem extends Component {
   state = {
@@ -28,15 +28,18 @@ class MyCarouselItem extends Component {
 
   render() {
     return (
-      <Carousel.Item className="d-block" interval={1000}>
-        <Row className="g-1">
-          {this.state.movies.slice(0, 4).map((film, index) => (
-            <Col sm="3" key={index}>
-              {<img src={film.Poster} alt="" />}
-            </Col>
-          ))}
-        </Row>
-      </Carousel.Item>
+      <Carousel>
+        <h1 className="mt-3">{this.props.titolo}</h1>
+        <Carousel.Item className="d-block" interval={1000}>
+          <Row className="g-2">
+            {this.state.movies.splice(0, 6).map((film, index) => (
+              <Col sm="2" key={index}>
+                {<Image className="img-fluid" src={film.Poster} alt="Copertina" />}
+              </Col>
+            ))}
+          </Row>
+        </Carousel.Item>
+      </Carousel>
     );
   }
 }

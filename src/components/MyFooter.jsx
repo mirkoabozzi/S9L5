@@ -7,7 +7,7 @@ class MyFooter extends Component {
       <Row className="justify-content-center">
         <Col sm="9">
           <Container className="footerContainer my-5">
-            <Row className="row">
+            <Row>
               <Col className="d-flex px-0">
                 <div className="p-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
@@ -31,7 +31,7 @@ class MyFooter extends Component {
                 </div>
               </Col>
             </Row>
-            <Row className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-4">
               <Container className="socialIconContainer">
                 <p>Audio and Subtitles</p>
                 <p>Media Center</p>
