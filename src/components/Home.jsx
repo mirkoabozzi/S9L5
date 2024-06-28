@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 // import MyCarousel from "./MyCarousel";
-import MyCarouselItem from "./MyCarouselItem";
+import MyCarousel from "./MyCarousel";
 
 class Home extends Component {
   render() {
@@ -10,10 +10,10 @@ class Home extends Component {
         <Row className="justify-content-between">
           <Col className="col-6">
             <Row className="d-block d-md-flex">
-              <Col className="col-4">
+              <Col sm="4">
                 <h1 className="mt-3">Tv Show</h1>
               </Col>
-              <Col className="col-4 d-flex align-items-center">
+              <Col sm="4" className="d-flex align-items-center">
                 <Dropdown>
                   <Dropdown.Toggle variant="" className="border border-2" id="dropdown-basic">
                     Generes
@@ -28,7 +28,7 @@ class Home extends Component {
             </Row>
           </Col>
           <Col className="col-2">
-            <Row className="row justify-content-end">
+            <Row className="justify-content-end">
               <Col className="col-4 border border-light d-flex justify-content-center align-items-center p-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-justify-left" viewBox="0 0 16 16">
                   <path
@@ -46,9 +46,9 @@ class Home extends Component {
           </Col>
         </Row>
 
-        <MyCarouselItem titolo="Tranding now" film="narcos" />
-        <MyCarouselItem titolo="Wach again" film="harry potter" />
-        <MyCarouselItem titolo="New release" film="lupin" />
+        <MyCarousel titolo="Trending Now" film="narcos" />
+        <MyCarousel titolo="Watch Again" film="harry potter" />
+        <MyCarousel titolo="New Release" film="lupin" />
       </Container>
     );
   }
