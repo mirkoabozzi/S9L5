@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
+import MyCarousel from "./MyCarousel";
 
 class Home extends Component {
   render() {
@@ -31,7 +32,7 @@ class Home extends Component {
                 <Col className="col-4 border border-light d-flex justify-content-center align-items-center p-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-justify-left" viewBox="0 0 16 16">
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
                     />
                   </svg>
@@ -45,6 +46,10 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
+
+        <MyCarousel titolo="Tranding now" film="narcos" />
+        <MyCarousel titolo="Wach again" film="harry potter" />
+        <MyCarousel titolo="New release" film="lupin" />
       </Container>
     );
   }
