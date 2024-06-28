@@ -1,11 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import MyNav from "./components/MyNav";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="" data-bs-theme="dark">
+    <div className="">
       <MyNav />
+      <Home />
     </div>
   );
 }
