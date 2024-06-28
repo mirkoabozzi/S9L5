@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 // import MyCarousel from "./MyCarousel";
 import MyCarousel from "./MyCarousel";
+import MySlick from "./MySlick";
 
 class Home extends Component {
   render() {
@@ -49,6 +50,7 @@ class Home extends Component {
         <MyCarousel titolo="Trending Now" film="narcos" />
         <MyCarousel titolo="Watch Again" film="harry potter" />
         <MyCarousel titolo="New Release" film="lupin" />
+        <MySlick titolo="Slick" film="hobbit" />
       </Container>
     );
   }
