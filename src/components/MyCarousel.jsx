@@ -30,8 +30,8 @@ class MyCarousel extends Component {
   render() {
     return (
       <>
-        {this.state.isLoading && <Spinner animation="grow" />}
         <h1 className="mt-3">{this.props.titolo}</h1>
+        {this.state.isLoading && <Spinner animation="grow" />}
         <Carousel>
           <Carousel.Item interval={2000}>
             <Row className="g-2">
